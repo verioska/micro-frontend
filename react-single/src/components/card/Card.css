@@ -1,0 +1,39 @@
+
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+  transition: all 0.7s linear;
+}
+.card{
+  width: 300px;
+  margin: 5%;
+}
+.card__element--change {
+  padding: 2rem 0 !important;
+  background: #1f2126;
+  text-align: center;
+  width: 100%;
+}
+.card__element-item{
+  font-size: 25px;
+  color: white;
+}
+.card__element-button{
+  margin-top: 26px;
+  padding: 16px;
+  font-size: 17px;
+  border: 9%;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #ffff1c 0, #ffec0f 16.67%, #ffd504 33.33%, #f9bd00 50%, #eaa601 66.67%, #dc9105 83.33%, #cf7e0a 100%);
+  font-weight: bold;
+}
+.card__element--modifier {
+  overflow: hidden;
+}
+.card__element-img {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.card__element-img:hover {
+  transform: scale(1.8)
+}

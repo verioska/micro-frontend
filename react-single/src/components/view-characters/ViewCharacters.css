@@ -1,0 +1,13 @@
+.home__element--title{
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #f9bd00;
+  text-align: center;
+}
+
+
+@media (max-width: 700px) {
+  .home__element--title {
+    margin-top: 75px;
+  }   
+}

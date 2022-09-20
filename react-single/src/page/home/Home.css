@@ -1,0 +1,36 @@
+.home{
+  border: 4px solid #f9bd00;
+  height: 100vh;
+}
+.home__element--modifier{
+  height: 150px;
+}
+.home__element-card{
+  display: flex;
+  justify-content: center;
+}
+.home__element--text{
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.home__element--changer{
+  margin-left: 12px;
+  color: #f9bd00;
+}
+
+@media (max-width: 700px) {
+  .home__element-card {
+    flex-wrap: wrap;
+    max-height: 317px;
+    overflow: scroll;
+  }
+  .home__element--text{
+    display: block;
+    text-align: center;
+    margin-top: 104px;
+    font-size: 29px;
+  }
+}
