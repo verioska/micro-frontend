@@ -14,8 +14,6 @@ import '../../../../react-single/src/page/home/Home.css'
     } )
   },[])
 
-
-
   return(
     <div className='home'>
       <ViewCharacters/>

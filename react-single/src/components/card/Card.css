@@ -1,6 +1,6 @@
 
 .card:hover {
-  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) ;
   transition: all 0.7s linear;
 }
 .card{
@@ -8,7 +8,7 @@
   margin: 5%;
 }
 .card__element--change {
-  padding: 2rem 0 !important;
+  padding: 2rem 0 ;
   background: #1f2126;
   text-align: center;
   width: 100%;

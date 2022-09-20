@@ -17,7 +17,6 @@ import '../../../../react-single/src/page/home/Home.css'
       </div>
     </LangProvider>
   )
-
 }
 
 export default ViewCharacters

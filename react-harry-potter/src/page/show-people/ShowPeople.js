@@ -44,7 +44,6 @@ import CardCharacter from '../../../../react-single/src/components/card-characte
       {characters.length && renderCharacters()}
     </div>
   )
-
 }
 
 export default ShowPeople

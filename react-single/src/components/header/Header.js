@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {langContext} from '../../context/LangContext'
-import Logo from '../../assets/Logo_V.png'
+import Logo from '../../assets/logo_V.png'
 import FlagEs from '../../assets/es.png'
 import FlagEn from '../../assets/en.png'
 import './Header.css';

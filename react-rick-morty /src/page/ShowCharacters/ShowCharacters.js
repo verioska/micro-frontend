@@ -43,7 +43,6 @@ import CardCharacter from '../../../../react-single/src/components/card-characte
       {renderCharacters()}
     </div>
   )
-
 }
 
 export default ShowCharacters
