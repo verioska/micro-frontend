@@ -3,7 +3,7 @@ import { getCharacters } from '../../clients/characters'
 import CardCharacter from '../../../../react-single/src/components/card-character/CardCharacter'
 
 
- const ShowCharacters = () =>{
+ const ShowCharacters = (lang) =>{
   const [characters, setCharacters] = useState([]) 
 
   useEffect(() => {
@@ -31,6 +31,7 @@ import CardCharacter from '../../../../react-single/src/components/card-characte
           gender={character.gender}
           species={character.species}
           type='rick'
+          lang={lang.lang}
           />
         )
       )

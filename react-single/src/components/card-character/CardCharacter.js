@@ -1,15 +1,20 @@
 import React from 'react'
+import {FormattedMessage} from 'react-intl'
+import {messages as allMessages} from '../../lang/messages'
+import {IntlProvider } from 'react-intl'
 import './CardCharacter.css'
 
- const CardCharacter = ({name, image, actor, dateOfBirth, house, type, gender, species}) =>{
+ const CardCharacter = ({name, image, actor, dateOfBirth, house, type, gender, species,lang}) =>{
+  const currentLocale = lang;
+  const messages = allMessages[currentLocale];
 
   const renderContainerHarry = () => {
     return(
       <>
-        <h1>{actor}</h1>
-        <p>Actor:{name}</p>
-        <p>Fecha de nacimiento:{dateOfBirth}</p>
-        <p>Casa: {house}</p>
+        <h1 className="wrapper__elemen-h">{actor}</h1>
+        <p className="wrapper__elemen-p"><FormattedMessage id="card.actor"/>: {name}</p>
+        <p className="wrapper__elemen-p"><FormattedMessage id="card.date"/>: {dateOfBirth}</p>
+        <p className="wrapper__elemen-p"><FormattedMessage id="card.house"/>: {house}</p>
       </>
     )
   }
@@ -17,23 +22,25 @@ import './CardCharacter.css'
   const renderContainerRickAndMorty = () => {
     return(
       <>
-        <h1>{name}</h1>
-        <p>Especie:{species}</p>
-        <p>Sexo:{gender}</p>
+        <h1 className="wrapper__elemen-h">{name}</h1>
+        <p className="wrapper__elemen-p"><FormattedMessage id="card.species"/>: {species}</p>
+        <p className="wrapper__elemen-p"><FormattedMessage id="card.gender"/>: {gender}</p>
       </>
     )
   }
 
   return(
-    <div class="wrapper" key={name}>
-      <div class="card">
-        <img src={image} />
-        <div class="descriptions">
-          {type === 'harry' && renderContainerHarry()}
-          {type === 'rick' && renderContainerRickAndMorty()}
+    <IntlProvider locale={currentLocale} messages={messages}>
+      <div className="wrapper" key={name}>
+        <div className="wrapper__element">
+          <img src={image} className="wrapper__element-img" />
+          <div className="wrapper__elemen--change">
+            {type === 'harry' && renderContainerHarry()}
+            {type === 'rick' && renderContainerRickAndMorty()}
+          </div>
         </div>
       </div>
-    </div>
+    </IntlProvider>
   )
 }
 

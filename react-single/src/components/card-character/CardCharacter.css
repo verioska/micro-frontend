@@ -7,7 +7,7 @@
   justify-content: space-between;
   margin: 25px;
 }
-.card{
+.wrapper__element{
   height: 440px;
   max-width: 255px;
   cursor: pointer;
@@ -17,12 +17,12 @@
   display: flex;
   flex-wrap: wrap;
 }
-.card img{
+.wrapper__element .wrapper__element-img{
   width: 100%;
   height:100%;
   transition: all .5s cubic-bezier(.8,.5,.2,1.4);
 }
-.descriptions{
+.wrapper__elemen--change{
   position: absolute;
   top:0px;
   left:0px;
@@ -34,42 +34,25 @@
   box-sizing: border-box;
   clip-path: circle(0% at 100% 100%);
 }
-.card:hover .descriptions{
+.wrapper__element:hover .wrapper__elemen--change{
   left:0px;
   transition: all .7s ease-in-out;
   clip-path: circle(75%);
 }
-.card:hover{
+.wrapper__element:hover{
   transition: all .5s cubic-bezier(.8,.5,.2,1.4);
   box-shadow: 0px 2px 3px rgba(0,0,0,.3);
   transform: scale(.97);
 }
-.card:hover img{
+.wrapper__element:hover .wrapper__element-img{
   transition: all .5s cubic-bezier(.8,.5,.2,1.4);
   transform: scale(1.6) rotate(20deg);
   filter: blur(3px);
 }
-.card h1{
+.wrapper__element .wrapper__elemen-h{
   letter-spacing: 1px;
-  margin: 0px;
+  margin-bottom: 20px;
 }
-.card p{
-  line-height: 24px;
+.wrapper__element .wrapper__elemen-p{
+  line-height: 30px;
 }
-.card button{
-  width: fit-content;
-  height: 40px;
-  cursor: pointer;
-  border-style: none;
-  background-color: #ff3838;
-  color:#fff;
-  font-size: 15px;
-  outline: none;
-  box-shadow: 0px 2px 3px rgba(0,0,0,.4);
-  transition: all .5s ease-in-out;
-}
-.card button:hover{
-  transform: scale(.95) translateX(-5px);
-  transition: all .5s ease-in-out;
-}
-
